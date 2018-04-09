@@ -1,0 +1,13 @@
+{
+    "name": "almir/pag",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Almir Junior",
+            "email": "oliveira_junior90@hotmail.com"
+        }
+    ],
+    "require": {
+        "klein/klein": "^2.1"
+    }
+}

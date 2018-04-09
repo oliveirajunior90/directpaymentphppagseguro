@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <form id="formPayment">
+
+            <h2>Dados Pessoais</h2>
+            
+            <input type="hidden" name="senderHash" id="senderHash">
+            <input type="hidden" name="Produto1" value="Produto">
+            <input type="hidden" name="tokenCartao" id="tokenCartao"><br><br>
+
+            <label for="">Nome</label><br>
+            <input type="text" name="nome" required><br><br>
+            <label for="Email" required>E-mail</label><br>
+            <input type="text" name="email" required><br><br>
+            <label for="Telefone">Telefone</label><br>
+            <input type="text" maxlength="2" name="ddd" size="2" placeholder="ddd" required>
+            <input type="text" name="telefone" maxlength="9" size="13" placeholder="Número" required><br><br>
+            <label for="">CPF</label><br>
+            <input type="text" name="cpf" id="cpf" maxlength="11" placeholder="Digite somente números" data-mask="000.000.000-00" required><br><br>
+
+            <h2>Dados do cartão de crédito</h2>
+           
+
+            <label for="">Bandeira</label><br>
+            <select name="bandeiraCartao" id="bandeiraCartao" required>
+                <option selected disabled hidden value="0">Selecionar</option>
+                <option value="visa">Visa</option>
+                <option value="mastercard">Mastercard</option>
+            </select><br><br>
+            <div id="dadosCartao">
+                <label for="">Número do Cartão</label><br>
+                <input type="text" name="numeroCartao" id="numeroCartao" maxlength="16" placeholder="digite somente números" required disabled><br><br>
+                <label for="">Data de vencimento</label><br>
+                <input type="text" name="mesVencimentoCartao" id="mesVencimentoCartao" maxlength="2" placeholder="Mês" size="2" placeholder="Mês" required disabled>
+                <input type="text" name="anoVencimentoCartao" id="anoVencimentoCartao" maxlength="4" placeholder="Ano" size="4" placeholder="Ano" required disabled><br><br>
+                <label for="">Código de validação (no verso)</label><br>
+                <input type="text" name="cvvCartao" maxlength="3" placeholder="xxx" size="3" required disabled><br><br>
+            </div>
+            <input type="submit">
+            
+
+        </form>
+    </body>
+    <script src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="bower_components/jquery-mask/dist/jquery.mask.min.js"></script>
+    <script src="js/pag.js"></script>
+</html>

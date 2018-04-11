@@ -41,7 +41,7 @@ class CreateTransactionUsingCreditCard
         /**
         * @todo Change the receiver Email
         */
-        $directPaymentRequest->setReceiverEmail('vendedor@lojamodelo.com.br');
+        $directPaymentRequest->setReceiverEmail('oliveira_junior90@hotmail.com');
 
         // Set the currency
         $directPaymentRequest->setCurrency("BRL");

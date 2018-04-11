@@ -31,7 +31,7 @@ class PagSeguroConfigWrapper
     /**
      *
      */
-    const PAGSEGURO_EMAIL = "thiago.soares@enel.com";
+    const PAGSEGURO_EMAIL = "oliveira_junior90@hotmail.com";
     /**
      *
      */
@@ -39,7 +39,7 @@ class PagSeguroConfigWrapper
     /**
      *
      */
-    const PAGSEGURO_TOKEN_SANDBOX = "9BB8AB585E9046F791751A3483C13832";
+    const PAGSEGURO_TOKEN_SANDBOX = "E08915A1A17047289438BBB439337985";
     /**
      *
      */
@@ -47,7 +47,7 @@ class PagSeguroConfigWrapper
     /**
      *
      */
-    const PAGSEGURO_APP_ID_SANDBOX = "app8983306938";
+    const PAGSEGURO_APP_ID_SANDBOX = "app7635911756";
     /**
      *
      */
@@ -55,7 +55,7 @@ class PagSeguroConfigWrapper
     /**
      *
      */
-    const PAGSEGURO_APP_KEY_SANDBOX = "E33C6B245353C166641E9F9A3DCEB1A5";
+    const PAGSEGURO_APP_KEY_SANDBOX = "77CBF3D91414680CC4EB3FBC48A0790F";
     /**
      * UTF-8, ISO-8859-1
      */

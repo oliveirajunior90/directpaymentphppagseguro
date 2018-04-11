@@ -5,6 +5,9 @@
         <title>Form</title>
     </head>
     <body>
+        <div id="formResponse">
+            <ul class='formErrorList'></ul>
+        </div>
         <form id="formPayment">
 
             <h2>Dados Pessoais</h2>
@@ -16,21 +19,38 @@
             <label for="">Nome</label><br>
             <input type="text" name="nome" required><br><br>
             <label for="Email" required>E-mail</label><br>
-            <input type="text" name="email" required><br><br>
+            <input type="text" name="email" value="almir@sandbox.pagseguro.com.br" required><br><br>
             <label for="Telefone">Telefone</label><br>
             <input type="text" maxlength="2" name="ddd" size="2" placeholder="ddd" required>
             <input type="text" name="telefone" maxlength="9" size="13" placeholder="Número" required><br><br>
             <label for="">CPF</label><br>
             <input type="text" name="cpf" id="cpf" maxlength="11" placeholder="Digite somente números" data-mask="000.000.000-00" required><br><br>
+            <label for="">Data de Nascimento</label><br>
+            <input type="text" name="dataNascimento" id="dataNascimento" maxlength="11" data-mask="00/00/0000" placeholder="dd/mm/aa" required><br><br>
+            <br><br>
+            
+            <label for="Endereço"></label>
+            <label for="">CEP</label><br>
+            <input type="text" name="endCep" id="endCep" maxlength="11" required><br><br>
+            <label for="">Endereço</label><br>
+            <input type="text" name="endRua" id="endRua" placeholder="Rua" required><br><br>
+            <input type="text" name="endNumero" id="endNumero" placeholder="Número" size="4" maxlength="6" required>
+            <input type="text" name="endComplemento" id="endComplemento" placeholder="Complemento" size="20" maxlength="16">
+            <br><br>
+            <label for="">Estado</label><br>
+            <input type="text" name="endEstado" id="endEstado" required><br><br>
+            <label for="">Cidade</label><br>
+            <input type="text" name="endCidade" id="endCidade" required><br><br>
+            <input hidden="text" name="endMunicipio" id="endMunicipio">
+            
 
             <h2>Dados do cartão de crédito</h2>
            
-
             <label for="">Bandeira</label><br>
             <select name="bandeiraCartao" id="bandeiraCartao" required>
                 <option selected disabled hidden value="0">Selecionar</option>
-                <option value="visa">Visa</option>
-                <option value="mastercard">Mastercard</option>
+                <option value="VISA">Visa</option>
+                <option value="MASTERCARD">Mastercard</option>
             </select><br><br>
             <div id="dadosCartao">
                 <label for="">Número do Cartão</label><br>
@@ -46,9 +66,11 @@
 
         </form>
     </body>
+
     <script src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="bower_components/jquery-mask/dist/jquery.mask.min.js"></script>
+    <script src="js/addressfiller.js"></script>
     <script src="js/pag.js"></script>
 </html>
